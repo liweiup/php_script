@@ -12,5 +12,5 @@ for ($i = $start_num;$i <= $end_num; $i++) {
             <needexport>yes</needexport>
             <checkTranslatedPK>no</checkTranslatedPK>
         </field>";
-//    echo $str.PHP_EOL;
+    echo $str.PHP_EOL;
 }
