@@ -1,7 +1,7 @@
 <?php
 $start_num = $_POST['start_num'] ?: 1;
 $end_num = $_POST['end_num'] ?: 10;
-$flag_name = $_POST['flag_name'] ?: 'zyx';
+$flag_name = $_POST['flag_name'] ?: 'def';
 for ($i = $start_num;$i <= $end_num; $i++) {
     $str = "        <field desc=\"自定义项{$i}\">
             <matchtag>$flag_name$i</matchtag>
