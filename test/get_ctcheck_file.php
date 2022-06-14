@@ -1,9 +1,11 @@
 <?php
-
-for ($i = 1;$i <= 20; $i++) {
+$start_num = $_POST['start_num'] ?: 1;
+$end_num = $_POST['end_num'] ?: 10;
+$flag_name = $_POST['flag_name'] ?: 'zyx';
+for ($i = $start_num;$i <= $end_num; $i++) {
     $str = "        <field desc=\"自定义项{$i}\">
-            <matchtag>def$i</matchtag>
-            <name>def$i</name>
+            <matchtag>$flag_name$i</matchtag>
+            <name>$flag_name$i</name>
             <type>CUSTOM</type>
             <nullallowed>yes</nullallowed>
             <maxLength>101</maxLength>
@@ -11,17 +13,4 @@ for ($i = 1;$i <= 20; $i++) {
             <checkTranslatedPK>no</checkTranslatedPK>
         </field>";
 //    echo $str.PHP_EOL;
-}
-
-for ($i = 20;$i <= 30; $i++) {
-    $str = "        <field desc=\"自定义项{$i}\">
-            <matchtag>zyx$i</matchtag>
-            <name>zyx$i</name>
-            <type>CUSTOM</type>
-            <nullallowed>yes</nullallowed>
-            <maxLength>101</maxLength>
-            <needexport>yes</needexport>
-            <checkTranslatedPK>no</checkTranslatedPK>
-        </field>";
-    echo $str.PHP_EOL;
 }
